@@ -75,7 +75,7 @@ export default function Dashboard() {
 
   if (isLoading) {
     return (
-      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', width: '100%' }}>
         <CircularProgress size={60} thickness={4} />
       </Box>
     );
@@ -87,9 +87,6 @@ export default function Dashboard() {
         <Typography variant="h5" color="error">
           Error loading media
         </Typography>
-        <Button variant="contained" onClick={() => refetch()}>
-          Try Again
-        </Button>
       </Box>
     );
   }

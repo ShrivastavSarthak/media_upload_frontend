@@ -56,7 +56,7 @@ const SignUp = () => {
       },
       payload: values
     });
-    if (response.data?.statusCode===200) {
+    if (response.data?.statusCode===201) {
       const token = response.data.response?.token;
       const userId = response.data.response?.id;
       
