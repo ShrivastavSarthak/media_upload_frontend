@@ -1,16 +1,14 @@
-import { useState } from 'react';
-import { Box, Button, CircularProgress, TextField, Typography } from '@mui/material';
-import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as Yup from 'yup';
+"use client"
 import { usePostMethodMutation } from '@/services/data-service';
 import { ApiMethod, LoginApiUrls } from '@/shared/enums/api-enum';
-import { ResponseInterface } from '@/shared/types/http-types';
-import { toast } from 'sonner';
-import { localStorageHelper } from '@/services/local-storage-service';
-import { useRouter } from 'next/navigation';
 import { useAppDispatch } from '@/shared/hooks/redux-hook';
 import { setAuth } from '@/store/slices/userSlice';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { Box, Button, CircularProgress, TextField, Typography } from '@mui/material';
+import { useRouter } from 'next/navigation';
+import { useForm } from 'react-hook-form';
+import { toast } from 'sonner';
+import * as Yup from 'yup';
 
 interface SignupFormData {
   fullName: string;
